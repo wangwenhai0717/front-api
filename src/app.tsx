@@ -79,7 +79,7 @@ export const layout: RunTimeLayoutConfig = ({initialState, setInitialState}) => 
           tooltip={"查看本站技术及源码，欢迎 star"}
           icon={<GithubOutlined/>}
           onClick={() => {
-            location.href = "https://www.baidu.com"
+            location.href = "https://github.com/wangwenhai0717/xhapi.git"
           }
           }
         />

@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               <GithubOutlined/> 支持项目
             </Tooltip>
           ),
-          href: 'https://baidu.com',
+          href: 'https://github.com/wangwenhai0717/xhapi.git',
           blankTarget: true,
         },
       ]}
