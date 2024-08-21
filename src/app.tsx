@@ -94,12 +94,11 @@ export const layout: RunTimeLayoutConfig = ({initialState, setInitialState}) => 
       // 百度统计
       baiduStatistics()
       const {location} = history;
-      // if (!whiteList.includes(location.pathname)) {
-      //   getInitialState();
-      // }
-      // 如果没有登录，重定向到 login
-      if (!initialState?.loginUser && !/^\/\w+\/?$/.test(location.pathname) && location.pathname !== '/'
-        && location.pathname !== '/interface/list' && !location.pathname.includes("/interface_info/")) {
+      const whit = ['user/register', location.pathname];
+      if (whit.includes(location.pathname)) {
+        return;
+      }
+      if (!initialState?.loginUser && location.pathname !== loginPath) {
         history.push(loginPath);
       }
     },

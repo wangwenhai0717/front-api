@@ -108,6 +108,7 @@ declare namespace API {
   type InterfaceInfo = {
     createTime?: string;
     description?: string;
+    host?: string;
     id?: number;
     isDel?: number;
     method?: string;
@@ -124,6 +125,7 @@ declare namespace API {
   type InterfaceInfoAddRequest = {
     description?: string;
     id?: number;
+    host?: string;
     method?: string;
     name?: string;
     requestHeader?: string;
@@ -139,6 +141,7 @@ declare namespace API {
 
   type InterfaceInfoUpdateRequest = {
     description?: string;
+    host?: string;
     id?: number;
     method?: string;
     name?: string;
@@ -152,6 +155,7 @@ declare namespace API {
   type InterfaceInfoVo = {
     createTime?: string;
     description?: string;
+    host?: string;
     id?: number;
     isDel?: number;
     method?: string;
@@ -196,9 +200,13 @@ declare namespace API {
   };
 
   type LoginUserVO = {
+    accessKey?: string;
     createTime?: string;
     id?: number;
+    leftNum?: number;
+    secretKey?: string;
     updateTime?: string;
+    userAccount?: string;
     userAvatar?: string;
     userName?: string;
     userProfile?: string;
@@ -267,8 +275,10 @@ declare namespace API {
     createTime?: string;
     id?: number;
     isDelete?: number;
+    leftNum?: number;
     mpOpenId?: string;
     secretKey?: string;
+    signTime?: string;
     unionId?: string;
     updateTime?: string;
     userAccount?: string;
@@ -337,6 +347,10 @@ declare namespace API {
     userPassword?: string;
   };
 
+  type UserSignUpdateRequest = {
+    id?: number;
+  };
+
   type UserUpdateMyRequest = {
     userAvatar?: string;
     userName?: string;
@@ -345,10 +359,7 @@ declare namespace API {
 
   type UserUpdateRequest = {
     id?: number;
-    userAvatar?: string;
-    userName?: string;
-    userProfile?: string;
-    userRole?: string;
+    userAccount?: string;
   };
 
   type UserVO = {

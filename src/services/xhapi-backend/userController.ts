@@ -150,6 +150,21 @@ export async function updateUserUsingPost(
   });
 }
 
+/** updateKey POST /api/user/update/key */
+export async function updateKeyUsingPost(
+  body: API.UserUpdateRequest,
+  options?: { [key: string]: any },
+) {
+  return request<API.BaseResponseBoolean_>('/api/user/update/key', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    data: body,
+    ...(options || {}),
+  });
+}
+
 /** updateMyUser POST /api/user/update/my */
 export async function updateMyUserUsingPost(
   body: API.UserUpdateMyRequest,

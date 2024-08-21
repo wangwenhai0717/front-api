@@ -201,6 +201,11 @@ const TableList: React.FC = () => {
       valueType: 'text',
     },
     {
+      title: 'host',
+      dataIndex: 'host',
+      valueType: 'text',
+    },
+    {
       title: 'url',
       dataIndex: 'url',
       valueType: 'text',

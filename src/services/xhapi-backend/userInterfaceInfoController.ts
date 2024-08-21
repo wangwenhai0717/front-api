@@ -62,6 +62,21 @@ export async function listInterfaceInfoByPageUsingGet1(
   });
 }
 
+/** UserSign POST /api/interfaceInfo/sign */
+export async function userSignUsingPost(
+  body: API.UserSignUpdateRequest,
+  options?: { [key: string]: any },
+) {
+  return request<API.BaseResponseBoolean_>('/api/interfaceInfo/sign', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    data: body,
+    ...(options || {}),
+  });
+}
+
 /** updateInterface POST /api/interfaceInfo/update */
 export async function updateInterfaceUsingPost(
   body: API.UserInterfaceInfoUpdateRequest,

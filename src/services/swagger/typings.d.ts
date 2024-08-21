@@ -99,14 +99,21 @@ declare namespace API {
   };
 
   type User = {
+    accessKey?: string;
+    createTime?: string;
     id?: number;
-    username?: string;
-    firstName?: string;
-    lastName?: string;
-    email?: string;
-    password?: string;
-    phone?: string;
-    /** User Status */
-    userStatus?: number;
+    isDelete?: number;
+    leftNum?: number;
+    mpOpenId?: string;
+    secretKey?: string;
+    signTime?: string;
+    unionId?: string;
+    updateTime?: string;
+    userAccount?: string;
+    userAvatar?: string;
+    userName?: string;
+    userPassword?: string;
+    userProfile?: string;
+    userRole?: string;
   };
 }

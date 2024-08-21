@@ -18,7 +18,7 @@ interface ResponseStructure {
  */
 export const requestConfig: RequestConfig = {
   // 错误处理： umi@3 的错误处理方案。
-  baseURL: process.env.NODE_ENV === 'production' ? "http://xhapi.icu/" : 'http://localhost:8101',
+  baseURL: process.env.NODE_ENV === 'production' ? "https://xhapi.icu/" : 'http://localhost:8101',
   withCredentials: true,
 
   errorConfig: {

@@ -1,15 +1,11 @@
 import Footer from '@/components/Footer';
 import {
-  getCaptchaUsingGET,
-  userEmailRegisterUsingPOST,
   userRegisterUsingPost
 } from '@/services/xhapi-backend/userController';
 import {Link, useParams} from '@@/exports';
 import {
   AlipayCircleOutlined,
-  LinkOutlined,
   LockOutlined,
-  MailOutlined,
   RedditOutlined,
   TaobaoCircleOutlined,
   UserOutlined,
@@ -21,7 +17,6 @@ import {Helmet, history} from '@umijs/max';
 import {Form, message, Tabs} from 'antd';
 import React, {useEffect, useState} from 'react';
 import Settings from '../../../../config/defaultSettings';
-import {ProFormCaptcha} from "@ant-design/pro-form";
 import logo from '@/../public/icons/APILogo.gif';
 
 const ActionIcons = () => {
